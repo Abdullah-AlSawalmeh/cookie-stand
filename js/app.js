@@ -14,17 +14,23 @@ let Seattle = {
     return number_of_customers;
   },
   simulated_amount_of_cookies: function () {
-    return Math.floor(this.Avg_Cookie*this.number_of_cutomers_hourly());
+    return Math.floor(this.Avg_Cookie * this.number_of_cutomers_hourly());
   },
   show_the_result: function () {
+    let sum = 0;
     let element = document.getElementById(this.city_name);
     for (let i = 0; i < this.working_hors.length; i++) {
       this.result.push(this.simulated_amount_of_cookies());
+      sum = sum + this.result[i];
       let tag = document.createElement('li');
-      tag.innerHTML = this.working_hors[i] + ' ' + this.simulated_amount_of_cookies();
+      tag.innerHTML = this.working_hors[i] + ' ' + this.result[i];
       element.appendChild(tag);
-      console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
+      // console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
     }
+    let tag = document.createElement('li');
+    tag.innerHTML = 'Total is : ' + sum;
+    element.appendChild(tag);
+    console.log(sum);
   },
 };
 
@@ -44,14 +50,20 @@ let Tokyo = {
     return Math.floor(this.Avg_Cookie * this.number_of_cutomers_hourly());
   },
   show_the_result: function () {
+    let sum = 0;
     let element = document.getElementById(this.city_name);
     for (let i = 0; i < this.working_hors.length; i++) {
       this.result.push(this.simulated_amount_of_cookies());
+      sum = sum + this.result[i];
       let tag = document.createElement('li');
-      tag.innerHTML = this.working_hors[i] + ' ' + this.simulated_amount_of_cookies();
+      tag.innerHTML = this.working_hors[i] + ' ' + this.result[i];
       element.appendChild(tag);
-      console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
+      // console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
     }
+    let tag = document.createElement('li');
+    tag.innerHTML = 'Total is : ' + sum;
+    element.appendChild(tag);
+    console.log(sum);
   },
 };
 
@@ -72,14 +84,20 @@ let Dubai = {
     return Math.floor(this.Avg_Cookie * this.number_of_cutomers_hourly());
   },
   show_the_result: function () {
+    let sum = 0;
     let element = document.getElementById(this.city_name);
     for (let i = 0; i < this.working_hors.length; i++) {
       this.result.push(this.simulated_amount_of_cookies());
+      sum = sum + this.result[i];
       let tag = document.createElement('li');
-      tag.innerHTML = this.working_hors[i] + ' ' + this.simulated_amount_of_cookies();
+      tag.innerHTML = this.working_hors[i] + ' ' + this.result[i];
       element.appendChild(tag);
-      console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
+      // console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
     }
+    let tag = document.createElement('li');
+    tag.innerHTML = 'Total is : ' + sum;
+    element.appendChild(tag);
+    console.log(sum);
   },
 };
 
@@ -100,14 +118,20 @@ let Paris = {
     return Math.floor(this.Avg_Cookie * this.number_of_cutomers_hourly());
   },
   show_the_result: function () {
+    let sum = 0;
     let element = document.getElementById(this.city_name);
     for (let i = 0; i < this.working_hors.length; i++) {
       this.result.push(this.simulated_amount_of_cookies());
+      sum = sum + this.result[i];
       let tag = document.createElement('li');
-      tag.innerHTML = this.working_hors[i] + ' ' + this.simulated_amount_of_cookies();
+      tag.innerHTML = this.working_hors[i] + ' ' + this.result[i];
       element.appendChild(tag);
-      console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
+      // console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
     }
+    let tag = document.createElement('li');
+    tag.innerHTML = 'Total is : ' + sum;
+    element.appendChild(tag);
+    console.log(sum);
   },
 };
 
@@ -128,23 +152,27 @@ let Lima = {
     return Math.floor(this.Avg_Cookie * this.number_of_cutomers_hourly());
   },
   show_the_result: function () {
+    let sum = 0;
     let element = document.getElementById(this.city_name);
     for (let i = 0; i < this.working_hors.length; i++) {
       this.result.push(this.simulated_amount_of_cookies());
+      sum = sum + this.result[i];
       let tag = document.createElement('li');
-      tag.innerHTML = this.working_hors[i] + ' ' + this.simulated_amount_of_cookies();
+      tag.innerHTML = this.working_hors[i] + ' ' + this.result[i];
       element.appendChild(tag);
-      console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
+      // console.log(this.working_hors[i] + ' ' + this.simulated_amount_of_cookies());
     }
+    let tag = document.createElement('li');
+    tag.innerHTML = 'Total is : ' + sum;
+    element.appendChild(tag);
+    console.log(sum);
   },
 };
 
 
-// Seattle.number_of_cutomers_hourly();
+
 Seattle.show_the_result();
 Tokyo.show_the_result();
 Dubai.show_the_result();
 Paris.show_the_result();
 Lima.show_the_result();
-// console.log(Seattle.result);
-
