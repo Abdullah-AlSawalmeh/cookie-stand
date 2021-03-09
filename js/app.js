@@ -1,7 +1,7 @@
 'use strict';
-
+let my2DArray = [];
 function header(array) {
-  let working_hors = array ;
+  let working_hors = array;
   let table = document.getElementById('render');
   let trh = document.createElement('tr');
   table.append(trh);
@@ -13,19 +13,27 @@ function header(array) {
 function footer() {
   let table = document.getElementById('render');
   let trf = document.createElement('tr');
+  let resultsum = 0;
+  let resulttotal = 0;
   table.append(trf);
-  trf.innerHTML = '<td>' + '   ' + '</td>';
+  trf.innerHTML = '<td>' + ' Total  ' + '</td>';
   for (let i = 0; i < 14; i++) {
-    trf.innerHTML += '<td>' + (Seattle.result[i] + Tokyo.result[i] + Dubai.result[i] + Paris.result[i] + Lima.result[i]) + '   ' + '</td>';
+    for (let j = 0; j < my2DArray.length; j++) {
+      resultsum = resultsum + my2DArray[j][i];
+      resulttotal = resulttotal + my2DArray[j][i];
+    }
+    console.log(resultsum);
+    trf.innerHTML += '<td>' + resultsum + '   ' + '</td>';
+    resultsum = 0;
   }
-  trf.innerHTML += '<td>' + (Seattle.sum + Tokyo.sum + Dubai.sum + Paris.sum + Lima.sum) + '   ' + '</td>';
+  trf.innerHTML += '<td>' + resulttotal + '   ' + '</td>';
 }
 
 function Salmon_cookie(city_name, min_cust, max_cust, Avg_Cookie) {
-  this.city_name= city_name;
-  this.min_cust= min_cust;
+  this.city_name = city_name;
+  this.min_cust = min_cust;
   this.max_cust = max_cust;
-  this.Avg_Cookie= Avg_Cookie;
+  this.Avg_Cookie = Avg_Cookie;
   this.result = [];
   this.sum = 0;
 }
@@ -51,13 +59,14 @@ Salmon_cookie.prototype.render = function () {
     trb.innerHTML += '<td>' + this.result[i] + '</td>';
     console.log(this.result[i]);
   }
+  my2DArray.push(this.result);
   trb.innerHTML += '<td>' + this.sum + '</td>';
   console.log(this.sum);
 };
 /////////////////////////
 
 
-header(['country','6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total']);
+header(['country', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Daily Location Total']);
 
 let Seattle = new Salmon_cookie('Seattle', 23, 65, 6.3);
 Seattle.render();
@@ -69,6 +78,7 @@ let Paris = new Salmon_cookie('Paris', 20, 38, 2.3);
 Paris.render();
 let Lima = new Salmon_cookie('Lima', 2, 16, 4.6);
 Lima.render();
+console.log(my2DArray);
 
 let ask = confirm('Do u want to add a city?');
 while (ask) {
@@ -87,6 +97,3 @@ while (ask) {
 
 
 footer();
-
-
-
