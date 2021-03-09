@@ -70,4 +70,23 @@ Paris.render();
 let Lima = new Salmon_cookie('Lima', 2, 16, 4.6);
 Lima.render();
 
+let ask = confirm('Do u want to add a city?');
+while (ask) {
+
+  let promptarray = [];
+  promptarray.push(prompt('Enter the city name'));
+  promptarray.push(prompt('Enter the min cust'));
+  promptarray.push(prompt('Enter the max cust'));
+  promptarray.push(prompt('Enter the avg purchases'));
+  console.log(promptarray);
+
+  let newobj = new Salmon_cookie(promptarray[0], promptarray[1], promptarray[2], promptarray[3]);
+  newobj.render();
+  ask = confirm('Do u want to add a city?');
+}
+
+
 footer();
+
+
+
