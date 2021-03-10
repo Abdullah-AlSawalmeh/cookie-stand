@@ -11,11 +11,24 @@
 </head>
 
 <body>
-
+    <fieldset>
+        <form id="add_element">
+            <label for="city_name">Country name:</label>
+            <input type="text" id="city_name" name="city_name">
+            <br>
+            <label for="min_cust">Min customers:</label>
+            <input type="text" id="min_cust" name="min_cust">
+            <br>
+            <label for="max_cust">Max customers:</label>
+            <input type="text" id="max_cust" name="max_cust">
+            <br>
+            <label for="Avg_Cookie">Avg Purchase per customer</label>
+            <input type="text" id="Avg_Cookie" name="Avg_Cookie">
+            <br>
+            <input type="submit" value="Add to the table">
+        </form>
+    </fieldset>
     <table id="render">
-
-
-
     </table>
     <script src="js/app.js"></script>
 </body>
