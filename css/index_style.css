@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+span {
+    clear: both;
+}
+
+header {
+
+    background-color: rgb(88, 82, 82);
+    overflow: hidden;
+    height: 120px;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+}
+header section {
+    width: 80%;
+    margin: auto;
+}
+
+header img {
+    position: relative;
+    width: 25%;
+    float: left;
+    height: 80px;
+    top: -10px;
+
+}
+
+header li {
+    width: 22%;
+    float: left;
+    color: white;
+    font-size: 20px;
+    margin-left: 1%;
+    text-align: center;
+    height: 80px;
+    padding: 20px 0px;
+
+}
+header li:hover{
+    background: black;
+}
