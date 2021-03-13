@@ -1,0 +1,77 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 0px;
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+
+
+  display: block;
+}
+body {
+  width: 80%;
+  margin: auto;
+}
+form{
+  margin: 50px 0px;
+  display: block;
+  width: 100%;
+
+  /* background-color: brown; */
+}
+fieldset {
+    border-width: 0px;
+}
+input {
+  margin: 10px 0px;
+  font-size: 20px;
+}
+.button {
+  padding: 20px;
+  color: white;
+  background-color: brown;
+  border-width: 0px;
+  position: relative;
+  left: 40%;
+}
+
+.button:hover {
+  background-color: rgb(141, 37, 37);
+  cursor: pointer;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    background-color: brown;
+    padding: 50px;
+    color: white;
+}
+
+table {
+  width: 100%;
+  background-color: brown;
+  color: white;
+  margin-bottom: 30px;
+}
+
+td, tfoot {
+  width: 20px;
+  border: 1px solid black;
+}
+ 
+th {
+  width: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid black;
+}
+
+footer {
+  background-color: brown;
+  height: 80px;
+  padding: 10px;
+}
